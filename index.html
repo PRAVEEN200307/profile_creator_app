@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile creating app</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/output.css">
+</head>
+
+<body>
+    <section>
+        <header class="bg-blue-500 text-center text-white h-auto flex items-center justify-between p-5">
+            <div>
+                <h1 class="text-4xl py-10 " style="margin-left: 500px;">PROFILE CREATING APP</h1>
+            </div>
+            <div class="flex w-60 justify-between">
+                <div class="flex items-center flex-col">
+                    <img src="assets/img/discord.svg" alt="github" width="40">
+                    <a href="https://github.com/PRAVEEN200307/profile_creator_app">GIT HUB</a>
+                </div>
+                <div class="flex items-center flex-col">
+                    <img src="./assets/img/linkedin.svg" alt="linkedin" width="40">
+                    <a href="#">LINKED IN </a>
+                </div>
+            </div>
+        </header>
+        <main class=" bg-slate-200">
+            <form id="ProfieForm" class=" mx-28 p-7">
+                <div class="flex items-center justify-between text-xl font-thin">
+                    <div class="w-96 ">
+                        <label for="UserName">Enter you Name with photo <br>
+                            <div class="flex pt-6 items-center gap-3">
+                                <input type="file" name="userphoto" id="getPhoto" style="height:40px;" >
+                                <input type="text" name="userPhoto" id="UserName" class="w-96 h-10 rounded">
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="role">Role 
+                            <div class="pt-6">
+                                <input type="text" name="role" id="role" class="w-80 h" class="rounded " style="height:2em; border-radius: 2px;"> 
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <footer>
+
+        </footer>
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
