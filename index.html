@@ -18,7 +18,7 @@
             <div class="flex w-60 justify-between">
                 <div class="flex items-center flex-col">
                     <img src="assets/img/discord.svg" alt="github" width="40">
-                    <a href="https://github.com/PRAVEEN200307/profile_creator_app">GIT HUB</a>
+                    <a href="https://github.com/PRAVEEN200307/profile_creator_app" target="_blank">GIT HUB</a>
                 </div>
                 <div class="flex items-center flex-col">
                     <img src="./assets/img/linkedin.svg" alt="linkedin" width="40">
@@ -33,17 +33,40 @@
                         <label for="UserName">Enter you Name with photo <br>
                             <div class="flex pt-6 items-center gap-3">
                                 <input type="file" name="userphoto" id="getPhoto" style="height:40px;" >
-                                <input type="text" name="userPhoto" id="UserName" class="w-96 h-10 rounded">
+                                <input type="text" name="userPhoto" id="UserName" class="w-96 pl-4 h-10 rounded" placeholder="Enter your name">
                             </div>
                         </label>
                     </div>
                     <div>
                         <label for="role">Role 
                             <div class="pt-6">
-                                <input type="text" name="role" id="role" class="w-80 h" class="rounded " style="height:2em; border-radius: 2px;"> 
+                                <input type="text" name="role" id="role"  placeholder="software engineer"  
+                                class="w-80 pl-4" class="rounded " style="height:2em; border-radius: 2px;"> 
                             </div>
                         </label>
                     </div>
+                </div>
+                <div class="flex items-center justify-between text-xl font-thin mt-10">
+                    <div class="w-96">
+                        <label for="Skills">Skills<br>
+                            <div class="flex pt-6 items-center gap-3">
+                                <input type="text" name="userPhoto" id="Skills" placeholder="html,css,js,react" 
+                                class="w-96 h-10 rounded pl-2">
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="passions">Passions
+                            <div class="pt-6">
+                                <input type="text" name="passions" id="passions" class="w-80 pl-2" class="rounded " 
+                                style="height:2em; border-radius: 2px;" placeholder="create new thing"> 
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="mt-10 flex justify-center gap-10">
+                    <button type="reset" class="px-12 bg-slate-700 py-2 text-white rounded">reset</button>
+                    <button type="submit" class="px-12 py-2 bg-red-600 text-white rounded">submit</button>
                 </div>
             </form>
         </main>
