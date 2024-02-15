@@ -11,11 +11,11 @@
 
 <body>
     <section>
-        <header class="bg-blue-500 text-center text-white h-auto flex items-center justify-between p-5">
+        <header class="bg-blue-500 text-center gap-5 text-white h-auto flex items-center justify-center p-5    ">
             <div>
-                <h1 class="text-4xl py-10 " style="margin-left: 500px;">PROFILE CREATING APP</h1>
+                <h1 class="text-4xl sm:py-10 " style="text-align: center;">PROFILE CREATING APP</h1>
             </div>
-            <div class="flex w-60 justify-between">
+            <div class="flex w-52 justify-between flex-wrap gap-1">
                 <div class="flex items-center flex-col">
                     <img src="assets/img/discord.svg" alt="github" width="40">
                     <a href="https://github.com/PRAVEEN200307/profile_creator_app" target="_blank">GIT HUB</a>
@@ -27,11 +27,11 @@
             </div>
         </header>
         <main class=" bg-slate-200">
-            <form id="ProfieForm" class=" mx-28 p-7" meathod="post">
-                <div class="flex items-center justify-between text-xl font-thin">
+            <form id="ProfieForm" class="sm:mx-28 p-7" meathod="post">
+                <div class="flex items-center justify-between text-xl font-thin flex-wrap ">
                     <div class="relative">
                         <label for="UserName">Enter you Name with photo </label><br>
-                        <input type="text" name="userName" id="UserName" class="w-96 mt-6 pl-4 h-10 rounded ml-11"
+                        <input type="text" name="userName" id="UserName" class=" w-72 mt-6 pl-4 h-10 rounded ml-11"
                             placeholder="Enter your name" required>
                         <div class="absolute top-14 bg-slate-300 w-10 h-9 rounded p-1">
                             <label for="getPhoto">
@@ -44,8 +44,7 @@
                             <input type="file" name="userphoto" id="getPhoto" required class="invisible">
                         </div>
                     </div>
-
-                    <div>
+                    <div class="mt-6 sm:mt-0">
                         <label for="role">Role
                             <div class="pt-6">
                                 <input type="text" name="role" id="role" placeholder="software engineer"
@@ -54,16 +53,16 @@
                         </label>
                     </div>
                 </div>
-                <div class="flex items-center justify-between text-xl font-thin mt-10">
+                <div class="flex items-center justify-between text-xl font-thin mt-10 flex-wrap">
                     <div class="w-96">
                         <label for="Skills">Skills<br>
                             <div class="pt-6">
                                 <input type="text" name="userskills" id="Skills" placeholder="html,css,js,react"
-                                    class="w-96 h-10 rounded pl-2" required>
+                                    class="w-80 h-10 rounded pl-2" required>
                             </div>
                         </label>
                     </div>
-                    <div>
+                    <div class="mt-4 sm:mt-0">
                         <label for="passions">Passions
                             <div class="pt-6">
                                 <input type="text" name="passions" id="passions" class="w-80 pl-2" class="rounded "
@@ -74,13 +73,14 @@
                 </div>
                 <div class="mt-10 flex justify-center gap-10">
                     <button type="reset"
-                        class="px-12 border-2 bg-green-100 border-green-800 border py-2 text-green-800 rounded">reset</button>
+                        class="px-12  bg-green-100 border-green-800 border py-2 text-green-800 rounded">reset</button>
                     <button type="submit" class="px-12 py-2 bg-green-600 text-white rounded">submit</button>
                 </div>
             </form>
         </main>
-        <footer class="flex justify-center my-14">
-            <div class="bg-white w-5/12 shadow-lg shadow-gray-500 p-5 hidden" id="profileCard">
+        <footer class="flex justify-center my-14 ">
+            <div class="bg-white shadow-lg shadow-gray-500 p-5 hidden" id="profileCard" 
+              style='min-width:500px;'>
                 <div class="flex flex-col items-center gap-4">
                     <div>
                         <img alt="userPhoto" width="200" class="rounded-full" id="userimg">
