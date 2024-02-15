@@ -27,21 +27,29 @@
             </div>
         </header>
         <main class=" bg-slate-200">
-            <form id="ProfieForm" class=" mx-28 p-7">
+            <form id="ProfieForm" class=" mx-28 p-7" meathod="post">
                 <div class="flex items-center justify-between text-xl font-thin">
-                    <div class="w-96 ">
-                        <label for="UserName">Enter you Name with photo <br>
-                            <div class="flex pt-6 items-center gap-3">
-                                <input type="file" name="userphoto" id="getPhoto" style="height:40px;" >
-                                <input type="text" name="userPhoto" id="UserName" class="w-96 pl-4 h-10 rounded" placeholder="Enter your name">
-                            </div>
-                        </label>
+                    <div class="relative">
+                        <label for="UserName">Enter you Name with photo </label><br>
+                        <input type="text" name="userName" id="UserName" class="w-96 mt-6 pl-4 h-10 rounded ml-11"
+                            placeholder="Enter your name" required>
+                        <div class="absolute top-14 bg-slate-300 w-10 h-9 rounded p-1">
+                            <label for="getPhoto">
+                                <svg class="text-black" id="imageIcons" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 18q2.075 0 3.538-1.462Q17 15.075 17 13q0-2.075-1.462-3.538Q14.075 8 12 8Q9.925 8 8.463 9.462Q7 10.925 7 13q0 2.075 1.463 3.538Q9.925 18 12 18Zm0-2q-1.25 0-2.125-.875T9 13q0-1.25.875-2.125T12 10q1.25 0 2.125.875T15 13q0 1.25-.875 2.125T12 16Zm6-6q.425 0 .712-.288Q19 9.425 19 9t-.288-.713Q18.425 8 18 8t-.712.287Q17 8.575 17 9t.288.712Q17.575 10 18 10ZM4 21q-.825 0-1.412-.587Q2 19.825 2 19V7q0-.825.588-1.412Q3.175 5 4 5h3.15L8.7 3.325q.15-.15.337-.238Q9.225 3 9.425 3h5.15q.2 0 .388.087q.187.088.337.238L16.85 5H20q.825 0 1.413.588Q22 6.175 22 7v12q0 .825-.587 1.413Q20.825 21 20 21Zm16-2V7h-4.05l-1.825-2h-4.25L8.05 7H4v12Zm-8-6Z" />
+                                </svg>
+                            </label>
+                            <input type="file" name="userphoto" id="getPhoto" required class="invisible">
+                        </div>
                     </div>
+
                     <div>
-                        <label for="role">Role 
+                        <label for="role">Role
                             <div class="pt-6">
-                                <input type="text" name="role" id="role"  placeholder="software engineer"  
-                                class="w-80 pl-4" class="rounded " style="height:2em; border-radius: 2px;"> 
+                                <input type="text" name="role" id="role" placeholder="software engineer"
+                                    class="w-80 pl-4" class="rounded " style="height:2em; border-radius: 2px;" required>
                             </div>
                         </label>
                     </div>
@@ -49,31 +57,52 @@
                 <div class="flex items-center justify-between text-xl font-thin mt-10">
                     <div class="w-96">
                         <label for="Skills">Skills<br>
-                            <div class="flex pt-6 items-center gap-3">
-                                <input type="text" name="userPhoto" id="Skills" placeholder="html,css,js,react" 
-                                class="w-96 h-10 rounded pl-2">
+                            <div class="pt-6">
+                                <input type="text" name="userskills" id="Skills" placeholder="html,css,js,react"
+                                    class="w-96 h-10 rounded pl-2" required>
                             </div>
                         </label>
                     </div>
                     <div>
                         <label for="passions">Passions
                             <div class="pt-6">
-                                <input type="text" name="passions" id="passions" class="w-80 pl-2" class="rounded " 
-                                style="height:2em; border-radius: 2px;" placeholder="create new thing"> 
+                                <input type="text" name="passions" id="passions" class="w-80 pl-2" class="rounded "
+                                    style="height:2em; border-radius: 2px;" placeholder="create new thing" required>
                             </div>
                         </label>
                     </div>
                 </div>
                 <div class="mt-10 flex justify-center gap-10">
-                    <button type="reset" class="px-12 bg-slate-700 py-2 text-white rounded">reset</button>
-                    <button type="submit" class="px-12 py-2 bg-red-600 text-white rounded">submit</button>
+                    <button type="reset"
+                        class="px-12 border-2 bg-green-100 border-green-800 border py-2 text-green-800 rounded">reset</button>
+                    <button type="submit" class="px-12 py-2 bg-green-600 text-white rounded">submit</button>
                 </div>
             </form>
         </main>
-        <footer>
-
+        <footer class="flex justify-center my-14">
+            <div class="bg-white w-5/12 shadow-lg shadow-gray-500 p-5 hidden" id="profileCard">
+                <div class="flex flex-col items-center gap-4">
+                    <div>
+                        <img alt="userPhoto" width="200" class="rounded-full" id="userimg">
+                    </div>
+                    <h1 class="font-extrabold tracking-[.25em] text-lg" id="profileName"></h1>
+                    <h3 class="ml-32 text-slate-600" id="userRole"></h3>
+                </div>
+                <div class="mx-14">
+                    <h1 class="text-lg font-medium">SKILLS</h1>
+                    <ul class="flex  gap-10 pl-5" id="profileSkills">
+                    </ul>
+                </div>
+                <div class="mx-14 my-4">
+                    <h1 class="text-lg font-medium">PASSIONS</h1>
+                    <ul class="flex  gap-10 pl-5" id="userPassion">
+                    </ul>
+                </div>
+            </div>
         </footer>
     </section>
+
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
